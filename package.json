@@ -34,7 +34,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
-		"build": "gatsby build",
+		"build": "gatsby build && rsync -av --delete public/ docs/",
 		"start": "npx vercel dev && gatsby develop -o",
 		"reset": "rm -rf .cache/ public/",
 		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
@@ -42,7 +42,8 @@
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
 		"babel-plugin-styled-components": "^1.10.6",
-		"eslint": "^7.27.0"
+		"eslint": "^7.27.0",
+		"rsync": "^0.6.1"
 	},
 	"repository": "git@github.com:smakosh/gatsby-portfolio-dev.git",
 	"bugs": {
